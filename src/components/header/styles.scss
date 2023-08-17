@@ -1,0 +1,116 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 1px solid #ede7e7;
+    padding: 6px 8%;
+}
+
+.logo{
+    width:100%;
+    max-width:8rem;
+    height:auto;
+    cursor: pointer;
+}
+
+.nav-container{
+
+    display: flex;
+    align-items: center;
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                padding:20px;
+
+                a{
+                    text-decoration: none;
+                    color:#666;
+                    font-size: 0.9rem;
+                    font-weight: 450;
+                    transition: color .3s;
+                    &:hover{
+                        color:#387ed1;
+                    }
+                }
+
+                i{
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+
+        .ham-icon{
+            //padding:20px;
+        }
+        
+}
+
+
+a#menu-icon {
+    display: inline-block;
+    padding: 8px 10px 0px 10px;
+  }
+  a#menu-icon .bar {
+    margin: 4px;
+    width: 25px;
+    height: 2px;
+    background: #000;
+    border-radius: 1.5px;
+    transition: margin 0.2s, transform 0.2s;
+
+    /* same as above but with prefixes added */
+    -webkit-transition: margin 0.2s, -webkit-transform 0.2s;
+    transition: margin 0.2s, -webkit-transform 0.2s;
+    -o-transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s;
+    transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  a#menu-icon:not(.close):hover {
+    //padding: 6px 10px;
+  }
+  a#menu-icon:not(.close):hover .bar {
+   // margin: 5px 3px;
+  }
+
+
+
+
+@media screen and (min-width:150px) and (max-width:960px) {
+    .nav-container{
+        nav{
+                display: none;
+        }
+    }
+
+
+    .ham-icon{
+        z-index:2;
+    }
+
+
+    a#menu-icon.close .bar:first-child {
+        -webkit-transform: translateY(6px) rotate(45deg);
+            -ms-transform: translateY(6px) rotate(45deg);
+                transform: translateY(6px) rotate(45deg);
+      }
+      a#menu-icon.close .bar:nth-child(2) {
+        opacity: 0;
+      }
+      a#menu-icon.close .bar:last-child {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+            -ms-transform: translateY(-6px) rotate(-45deg);
+                transform: translateY(-6px) rotate(-45deg);
+      }
+
+
+
+
+}
